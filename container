@@ -1,4 +1,18 @@
 import tkinter
+from tkinter import *
+root = Tk()
+
+#window text plus size
+root.title("Bank of Suffering")
+root.geometry('350x200')
+
+#text in the box
+lbl = Label(root, text = "Help for the love of god")
+lbl.grid()
+
+
+
+root.mainloop()
 #Tk(screenName=None,  baseName=None,  className='Tk',  useTk=1)
 #m = tkinter.Tk()
 #'''
