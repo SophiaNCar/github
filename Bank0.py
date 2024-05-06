@@ -19,17 +19,20 @@ def ask():
     #uU = Message(root, text = "Are you an existing user or a new user?")
 
 wM = Message(root, bg = "light yellow", fg = "dark green", font = "callibri", text = "Please obey the law, or consequences will come, so act accordingly.")
-b1 = Button(root, text = "Next", 
-            command = ask)
+#b1 = Button(root, text = "Next", 
+ #           command = ask)
 
-
+b2 = Button(root, text = "To Terminal",
+            command = root.destroy)
 
 
 #tTxt.pack()
 lbl.pack()
 wM.pack()
-b1.pack()
+#b1.pack()
+b2.pack(
 
+)
 #tTxt.insert(tk.END, wM)
 
 tk.mainloop()
@@ -37,18 +40,14 @@ tk.mainloop()
 #root.mainloop()
 
 #this is the welcome message
-def welcome():
-    print("Hello. Welcome to [Bank Name]!\n We're happy to help you.")
-    print("Please obey the law, or consequences will come, so act accordingly.")
-
-welcome()
 
 #asks the user if they have used this bank before or not and determines what to do depending on their
 #answer
-def userType():
-    input("First thing's first, are you a returning user or a new user?")
 
 #The protocol for new users
+
+
+
 def newUser():
     print("We're happy to have you join us.")
     username = input("Please enter your name.\n")
@@ -59,3 +58,15 @@ def oldUser():
     print("Welcome back.")
     iID = int(input("Please input your user ID.\n"))
     iPin = int(input("Please input your pin.\n"))
+
+
+def userType():
+    input("First thing's first, are you a returning user or a new user?\n1. New\n2. Existing\n")
+    if userType == 1:
+        newUser()
+    elif userType == 2:
+        oldUser()
+    else:
+        print("I didn't quite catch that; please try again.")
+        userType()
+userType()
