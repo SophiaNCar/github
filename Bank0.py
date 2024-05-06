@@ -14,7 +14,7 @@ lbl.config(font=("callibri", 14))
 #tTxt = Text(root, bg = "light yellow", fg = "dark green", height = 5, width = 52, font = "callibri")
 def ask():
     showinfo(
-        message = "test"
+        message = "Please check the terminal."
     )
     #uU = Message(root, text = "Are you an existing user or a new user?")
 
