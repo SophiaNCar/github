@@ -6,11 +6,28 @@ root = Tk()
 root.title("Bank of Suffering")
 root.geometry('350x200')
 
+menu = Menu(root)
+item = Menu(menu)
+item.add_command(label = 'New')
+menu.add_cascade(label = "file", menu = item)
+root.config(menu=menu)
+
 #text in the box
 lbl = Label(root, text = "Help for the love of god")
 lbl.grid()
 
+txt = Entry(root, width=10)
+txt.grid(column =1, row =0)
 
+def clicked():
+    res = "You wrote" + txt.get()
+    lbl.configure(text = res)
+    #lbl.configure(text = "teeest")
+
+btn = Button(root, text = "bank bitch",
+             fg = "red", command  = clicked)
+
+btn.grid(column=2, row=0)
 
 root.mainloop()
 #Tk(screenName=None,  baseName=None,  className='Tk',  useTk=1)
