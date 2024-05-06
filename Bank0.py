@@ -1,5 +1,40 @@
 #I think my og bank software might have been deleted, so let me speedrun
 import _tkinter
+from tkinter import *
+import tkinter as tk
+from tkinter.messagebox import showinfo
+#window application
+root = Tk()
+root.title("Bank Boyz")
+root.geometry("500x500")
+
+lbl = Label(root, text = "Hello. Welcome to [Bank Name]!\n We're happy to help you.")
+lbl.config(font=("callibri", 14))
+
+#tTxt = Text(root, bg = "light yellow", fg = "dark green", height = 5, width = 52, font = "callibri")
+def ask():
+    showinfo(
+        message = "test"
+    )
+    #uU = Message(root, text = "Are you an existing user or a new user?")
+
+wM = Message(root, bg = "light yellow", fg = "dark green", font = "callibri", text = "Please obey the law, or consequences will come, so act accordingly.")
+b1 = Button(root, text = "Next", 
+            command = ask)
+
+
+
+
+#tTxt.pack()
+lbl.pack()
+wM.pack()
+b1.pack()
+
+#tTxt.insert(tk.END, wM)
+
+tk.mainloop()
+
+#root.mainloop()
 
 #this is the welcome message
 def welcome():
