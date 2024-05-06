@@ -61,10 +61,10 @@ def oldUser():
 
 
 def userType():
-    input("First thing's first, are you a returning user or a new user?\n1. New\n2. Existing\n")
-    if userType == 1:
+    ask = input("First thing's first, are you a returning user or a new user?\n1. New\n2. Existing\n")
+    if ask == 1:
         newUser()
-    elif userType == 2:
+    elif ask == 2:
         oldUser()
     else:
         print("I didn't quite catch that; please try again.")
